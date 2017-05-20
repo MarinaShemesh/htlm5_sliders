@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  <title></title>
+</head>
+<body>
+  <h1>SLIDER CONTROL WITH THE HTML5 RANGE INPUT</h1>
+  <h2>A regular HTML5 silder</h2>
+       <div id="slider">10% <input id="slide" type="range"
+     min="10" max="150" step="5" value="100"
+     onchange="updateSlider(this.value)" />
+     150%
+    </div>
+    <br/>
+    <p>The code snipper for this slider is:</p>
+    <xmp style='padding:0px;margin:0px;white-space:nowrap'>
+    
+        10% <input id="slide" type="range"
+         min="10" max="150" step="5" value="100"/> 150%
+    </xmp>
+
+    <p>The attributes within the slider element states:</p> 
+      <ul>
+       <li>type="range" - tells the browser to treat it as a slider input</li>
+       <li>the "min" and "max" values - sets the minimum and maximum range of the slider.<br/> Note that the '10%' and '150%' before and at the end of the code snippet has been added to 'see' the ranges of the slider. </li>
+       <li>step attribute - the 'jump' between the values along the range. So here it will be 10, 15, 20, 25 up to 150.</li>
+       <li>value attribute - the initial starting value.</li>
+      </ul>
+    </p>
+    <br/>
+  <h2>Connecting a slider with Javascript snippet to see the value</h2>
+       <span id="range">0</span>
+       <input type="range" min="0" max="50" value="0" step="5" onchange="showValue(this.value)" />
+
+       <xmp style='padding:0px;margin:0px;white-space:nowrap'>
+       <span id="range">0</span>
+       <input type="range" min="0" max="50" value="0" step="5" onchange="showValue(this.value)" />
+        </xmp> 
+
+        <xmp style='padding:0px;margin:0px;white-space:nowrap'>
+        <script type="text/javascript"></script>
+        </xmp> 
+
+        <xmp style='padding:0px;margin:0px;white-space:nowrap'>
+        function showValue(newValue)
+        {
+          document.getElementById("range").innerHTML=newValue;
+        }
+       </xmp> 
+
+  
+  
+  <h2>Connecting a slider with Javascript and style with CSS</h2>
+  <div class="container">
+    <div id="slider">
+      5% <input id="slide" type="range"
+      min="5" max="200" step="5" value="100"
+      onchange="updateSlider(this.value)"/>
+      200%
+    </div>
+ </div>
+
+ <div id="chosen">100</div>
+  <br>
+ <div id="picholder">
+  <img id="pic" src="cateye.jpg" alt="cat eye"/>
+</div>
+
+<p>More information at this site: <a href="http://www.developerdrive.com/2012/07/creating-a-slider-control-with-the-html5-range-input/">Developer drive</a>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
